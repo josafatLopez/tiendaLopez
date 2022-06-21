@@ -1,0 +1,54 @@
+/* NORMAL HEADER MENÚ STYLES */
+header {
+   background: #FFF;
+   padding: 10px 0px;
+   position: relative;
+   z-index: 10000;
+}
+
+nav {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+nav img {
+   width: 120px;
+}
+
+nav ul {
+   display: flex;
+}
+
+nav ul li {
+   margin: 0 .8rem;
+}
+
+nav ul li a {
+   color: var(--darkestGray);
+}
+
+nav ul li a:hover {
+   color: black;
+}
+
+nav ul li a .fa-solid {
+   font-size: 20px;  
+}
+
+nav ul li a .fa-circle-user {
+   margin-left: .75rem;
+}
+
+nav ul li a .fa-cart-shopping {
+   color: var(--blue);
+   transition: .3s;
+}
+
+nav ul li a .fa-cart-shopping:hover {
+   color: var(--darkBlue);
+}
+
+/* RESPONSIVE STYLES */
