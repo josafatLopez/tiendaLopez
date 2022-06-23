@@ -47,3 +47,10 @@ body {
    background-repeat: no-repeat;
    height: 100vh;
 }
+
+/* CONTAINERS STYLES */
+
+.container {
+   max-width: 1200px;
+   margin: 2.5rem auto;
+}
