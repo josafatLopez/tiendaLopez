@@ -5,7 +5,7 @@ const CartWidget = () => {
       <li>
         <a href="#" className="cartIcon">
           <i className="fa-solid fa-cart-shopping"></i>
-          <span className="cartNumber">10</span>
+          <span className="cartNumber">0</span>
         </a>
       </li>
     </div>
