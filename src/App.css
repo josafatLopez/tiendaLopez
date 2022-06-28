@@ -54,3 +54,7 @@ body {
    max-width: 1200px;
    margin: 2.5rem auto;
 }
+
+.flexContainer {
+   display: flex;
+}

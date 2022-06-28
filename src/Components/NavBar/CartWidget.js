@@ -1,7 +1,14 @@
 
 const CartWidget = () => {
   return (
-    <div><li><a href="#"><i className="fa-solid fa-cart-shopping"></i></a></li></div>
+    <div>
+      <li>
+        <a href="#" className="cartIcon">
+          <i className="fa-solid fa-cart-shopping"></i>
+          <span className="cartNumber">10</span>
+        </a>
+      </li>
+    </div>
   )
 }
 

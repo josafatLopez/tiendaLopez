@@ -51,4 +51,21 @@ nav ul li a .fa-cart-shopping:hover {
    color: var(--darkBlue);
 }
 
+/* CART NUMBER */
+
+.cartIcon {
+   position: absolute;
+}
+
+.cartNumber {
+   position: relative;
+   top: -15px;
+   left: -8px;
+   padding: 4px 6px 4px 5.5px;
+   border-radius: 12px;
+   background-color: var(--orange);
+   font-size: 10px;
+   color: #FFF;
+}
+
 /* RESPONSIVE STYLES */
