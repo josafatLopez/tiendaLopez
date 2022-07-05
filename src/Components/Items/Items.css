@@ -1,0 +1,141 @@
+
+.listContainer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-top: -1.5rem;
+}
+
+
+.itemCard {
+   width: 32%;
+   background: #FFF;
+   display: flex;
+   box-shadow: 0px 2px 25px 5px rgb(234, 234, 234);
+   margin-bottom: 1.5rem;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.itemCard .imageCard {
+   width: 40%;
+   display: flex;
+   align-items: center;
+}
+
+.imageCard img {
+   width: 100%;
+}
+
+.bodyCard {
+   width: 60%;
+   padding: 1.5rem;
+}
+
+.cardTitle {
+   height: 32px;
+   overflow: hidden;
+   color: var(--blue);
+}
+
+.cardCategory {
+   font-size: 18px;
+   color: var(--darkGray);
+   margin: -.2rem 0 .75rem;
+}
+
+.cardPrice {
+   color: var(--lightBlue);
+   margin-bottom: .75rem;
+}
+
+.cardDescription {
+   color: var(--darkestGray);
+   overflow: hidden;
+   height: 75px;
+   margin-bottom: 1rem;
+}
+
+.btnDetails {
+   /* background: var(--lightBlue); */
+   background-color: var(--orange);
+   color: #FFF;
+   padding: .6rem 1.8rem;
+   border-radius: 1.5rem;
+   margin-right: .6rem;
+}
+
+.btnDetails:hover {
+   /* background: var(--blue); */
+   background-color: var(--darkOrange);
+}
+
+.btnCart {
+   background-color: var(--orange);
+   color: #FFF;
+   padding: .6rem;
+   border-radius: 1.2rem;
+}
+
+.btnCart:hover {
+   background-color: var(--darkOrange);
+}
+
+.detailContainer {
+   display: flex;
+   justify-content: space-between;
+}
+
+.imageDetail {
+   width: 55%;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+.imageDetail img {
+   width: 100%;
+}
+
+.contentDetail {
+   width: 40%;
+}
+
+.detailTitle {
+   color: var(--blue);
+   margin-bottom: .5rem;
+   font-size: 50px;
+}
+
+.detailCategory {
+   color: var(--darkGray);
+   font-weight: 100;
+   margin-bottom: .75rem;
+   font-size: 30px;
+}
+
+.detailPrice {
+   color: var(--lightBlue);
+   margin-bottom: 1rem;
+   font-size: 40px;
+}
+
+.detailDescription {
+   color: var(--darkestGray);
+   margin-bottom: 2.5rem;
+}
+
+.descriptionTitle {
+   color: #000;
+   font-size: 25px;
+}
+
+.addCart {
+   width: 100%;
+   background: var(--orange);
+   border-radius: 10px;
+   padding: 1rem;
+   color: #FFF;
+   font-size: 25px;
+}

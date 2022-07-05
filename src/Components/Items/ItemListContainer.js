@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import Item from './Item'
 import ItemList from './ItemList'
 import ItemCount from '../Counter.js/ItemCount'
+
+import './Items.css'
 
 const ItemListContainer = () => {
 
@@ -11,42 +12,28 @@ const ItemListContainer = () => {
 
   //For the items
   const [products, setProducts] = useState([]);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoaded] = useState(true);
 
   useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const response = await fetch('https://fakestoreapi.com/products/');
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        setError(true);
-        console.err(error);
-      }
-      finally {
-        console.log('finally');
-        setLoading(false)
-      }
-    }
-    getProducts();
+    fetch('https://fakestoreapi.com/products/')
+      .then(res => res.json())
+      .then(data => setProducts(data))
+      .catch(err => console.log(err))
+      .finally(() => setLoaded(false))
   }, []);
 
   return (
     <div className='container'>
 
-      {/* Item */}
-      <Item title='' />
-
-      {/* Item with counter */}
-      <ItemCount productName={'productOne'} stock={4} initial={1} onAdd={onAdd} />
-      <ItemCount productName={'productOne'} stock={4} initial={0} onAdd={onAdd} />
+      {/* Item with counter 
+        <ItemCount productName={'productOne'} stock={4} initial={1} onAdd={onAdd} />
+        <ItemCount productName={'productOne'} stock={4} initial={0} onAdd={onAdd} />
+      */}
 
       {/* Products */}
       <br /><br />
       {loading ? <p>Loading...</p> :
-        error ? <p>Error</p> :
-          <ItemList products={products} />
+        <ItemList products={products} />
       }
       {/* {loading ? <p>Loading...</p> :
         error ? <p>Error</p> :
