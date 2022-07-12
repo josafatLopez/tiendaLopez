@@ -1,21 +1,32 @@
-.btnCounter {
+.flexCouner {
+   display: flex;
+   align-items: center;
+}
+
+.counter {
    margin: 0 1rem;
+}
+
+.btnCounter {
    background-color: transparent;
    width: 50px;
    border: 1px solid #000;
    border-radius: 5px;
+   font-size: 16px;
 }
 
 .btnCounter:hover {
-   background: var(--mediumGray);
+   background: var(--gray);
 }
 
 .btnBuy {
-   padding: .75rem 1.25rem;
+   padding: 1rem;
+   width: 100%;
    background-color: var(--orange);
    color: #FFF;
    border-radius: 5px;
-   margin-top: 1rem;
+   margin-left: 2rem;
+   font-size: 20px;
 }
 
 .btnBuy:hover {

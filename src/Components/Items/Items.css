@@ -60,7 +60,7 @@
    /* background: var(--lightBlue); */
    background-color: var(--orange);
    color: #FFF;
-   padding: .6rem 1.8rem;
+   padding: .6rem 1.5rem;
    border-radius: 1.5rem;
    margin-right: .6rem;
 }
@@ -88,14 +88,17 @@
 
 .imageDetail {
    width: 55%;
+   height: 550px;
    display: flex;
    align-items: center;
-   overflow: hidden;
+   justify-content: center;
+   background-color: #FFF;
    border-radius: 10px;
+   overflow: hidden;
 }
 
 .imageDetail img {
-   width: 100%;
+   height: 85%;
 }
 
 .contentDetail {
@@ -105,20 +108,22 @@
 .detailTitle {
    color: var(--blue);
    margin-bottom: .5rem;
-   font-size: 50px;
+   font-size: 35px;
+   height: 85px;
+   overflow: hidden;
 }
 
 .detailCategory {
    color: var(--darkGray);
    font-weight: 100;
    margin-bottom: .75rem;
-   font-size: 30px;
+   font-size: 25px;
 }
 
 .detailPrice {
    color: var(--lightBlue);
    margin-bottom: 1rem;
-   font-size: 40px;
+   font-size: 30px;
 }
 
 .detailDescription {
@@ -137,5 +142,6 @@
    border-radius: 10px;
    padding: 1rem;
    color: #FFF;
-   font-size: 25px;
+   font-size: 20px;
+   font-weight: 600;
 }

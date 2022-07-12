@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemCount from '../Counter.js/ItemCount'
 
 const ItemDetail = ({ product }) => {
    return (
@@ -19,7 +20,8 @@ const ItemDetail = ({ product }) => {
                   {product.description}
                </p>
 
-               <button className="addCart">Agregar al Carrito</button>
+               <ItemCount stock={10} initial={1} />
+               
             </div>
          </div>
       </>

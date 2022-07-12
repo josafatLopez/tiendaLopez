@@ -20,14 +20,12 @@ nav img {
 
 nav ul {
    display: flex;
-}
-
-nav ul li {
-   margin: 0 .8rem;
+   margin-left: -2rem;
 }
 
 nav ul li a {
    color: var(--darkestGray);
+   margin: 0 .5rem;
 }
 
 nav ul li a:hover {
@@ -52,10 +50,6 @@ nav ul li a .fa-cart-shopping:hover {
 }
 
 /* CART NUMBER */
-
-.cartIcon {
-   position: absolute;
-}
 
 .cartNumber {
    position: relative;
