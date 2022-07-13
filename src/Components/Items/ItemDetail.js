@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ItemCount from '../Counter.js/ItemCount'
 
 const ItemDetail = ({ product }) => {
+
+   const [buyFinalized, setBuyFinalized] = useState(false)
+
+   //For the counter
+   //const onAdd = () => { alert('Productos agregados al carrito') }
+   const [finish, setFinish] = useState(false);
+
+   const onAdd = (counter) => {
+      setFinish(true);
+      console.log('Productos agregados', counter)
+   }
    return (
       <>
          <div className="detailContainer">
@@ -20,8 +32,14 @@ const ItemDetail = ({ product }) => {
                   {product.description}
                </p>
 
-               <ItemCount stock={10} initial={1} />
-               
+               {finish ?
+                  <Link to="/cart">
+                     <button className='btnBuy'>Finalizar compra</button>
+                  </Link>
+                  :
+                  <ItemCount stock={10} initial={0} onAdd={onAdd} />
+               }
+
             </div>
          </div>
       </>
