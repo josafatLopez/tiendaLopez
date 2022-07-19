@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../Counter.js/ItemCount'
+import { context } from '../Context/CartContext'
 
 const ItemDetail = ({ product }) => {
 
-   const [buyFinalized, setBuyFinalized] = useState(false)
-
-   //For the counter
-   //const onAdd = () => { alert('Productos agregados al carrito') }
    const [finish, setFinish] = useState(false);
+   const { addItem } = useContext(context)
 
    const onAdd = (counter) => {
       setFinish(true);
-      console.log('Productos agregados', counter)
+      addItem({ ...product, quantity: counter });
+      //console.log('Productos agregados', counter)
    }
    return (
       <>

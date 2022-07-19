@@ -22,7 +22,7 @@ const NavBar = () => {
                      {categories.map((category) => <Link key={category.id} to={category.route}>{category.name}</Link>)}
                   </li>
                   |
-                  {/* <li><a href="#"><i className="fa-solid fa-circle-user"></i></a></li> */}
+                  {/* <li><Link to="/"><i className="fa-solid fa-circle-user"></i></Link></li> */}
                   <Link to="/cart"><CartWidget /></Link>
                </ul>
             </nav>

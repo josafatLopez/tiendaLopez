@@ -11,7 +11,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
    const addToCart = () => {
       onAdd(counter);
-      console.log(counter)
+      //console.log(counter)
    }
 
    return (
