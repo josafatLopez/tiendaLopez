@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './Counter.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -20,7 +19,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
             <button className='btnCounter' onClick={del}>-</button>
             <h3 className='counter'>{counter}</h3>
-            <button className='btnCounter' onClick={add}>+</button>
+            <button className='btnCounter marginRight' onClick={add}>+</button>
 
             <button className='btnBuy' onClick={() => addToCart()}>Agregar al Carrito</button>
          </div>

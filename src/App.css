@@ -26,6 +26,7 @@ button {
    border: none;
    cursor: pointer;
    transition: .3s;
+   background: none;
 }
 
 ul {

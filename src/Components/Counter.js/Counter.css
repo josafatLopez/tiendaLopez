@@ -25,10 +25,13 @@
    background-color: var(--orange);
    color: #FFF;
    border-radius: 5px;
-   margin-left: 2rem;
    font-size: 20px;
 }
 
 .btnBuy:hover {
    background-color: var(--darkOrange);
+}
+
+.marginRight {
+   margin-right: 1.5rem;
 }
