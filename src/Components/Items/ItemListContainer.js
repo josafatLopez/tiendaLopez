@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 import ItemList from './ItemList'
-import ItemCount from '../Counter.js/ItemCount'
 import './Items.css'
 
 
 const ItemListContainer = () => {
-
-  //For the counter
-  //const onAdd = () => { alert('Productos agregados al carrito') }
 
   const { categoryName } = useParams()
 
@@ -18,22 +15,34 @@ const ItemListContainer = () => {
 
   useEffect(() => {
 
-    const url = categoryName ? `https://fakestoreapi.com/products/category/${categoryName}` : 'https://fakestoreapi.com/products/';
+    const queryDb = getFirestore();
+    const queryCollection = collection(queryDb, 'products');
 
-    fetch(url)
+    if (categoryName) {
+      const queryUrl = query(queryCollection, where('category', '==', categoryName))
+      getDocs(queryUrl)
+        .then(res => setProducts(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+        .catch(err => console.log(err))
+        .finally(() => setLoaded(false))
+    } else {
+      getDocs(queryCollection)
+        .then(res => setProducts(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+        .catch(err => console.log(err))
+        .finally(() => setLoaded(false))
+    }
+
+    /* const url = categoryName ? `https://fakestoreapi.com/products/category/${categoryName}` : 'https://fakestoreapi.com/products/'; */
+
+    /* fetch(url)
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.log(err))
-      .finally(() => setLoaded(false))
+      .finally(() => setLoaded(false)) */
+
   }, [categoryName]);
 
   return (
     <div className='container'>
-
-      {/* Item with counter 
-        <ItemCount productName={'productOne'} stock={4} initial={1} onAdd={onAdd} />
-        <ItemCount productName={'productOne'} stock={4} initial={0} onAdd={onAdd} />
-      */}
 
       {/* Products */}
       <br /><br />

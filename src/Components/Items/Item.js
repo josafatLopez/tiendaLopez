@@ -14,7 +14,7 @@ const Item = ({ product }) => {
 
         <div className='bodyCard'>
           <h2 className='cardTitle'>{product.title}</h2>
-          <p className='cardCategory'>{product.category}</p>
+          <p className='cardCategory'>{product.subtitle}</p>
           <h3 className='cardPrice'> ${product.price}MXN</h3>
           <p className='cardDescription'>{product.description}</p>
 

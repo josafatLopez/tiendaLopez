@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
+import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import React from 'react'
 import ItemDetail from "./ItemDetail";
 
@@ -12,11 +13,18 @@ const ItemDetailContainer = () => {
 
    useEffect(() => {
 
-      fetch(`https://fakestoreapi.com/products/${itemId}`)
+      const queryDb = getFirestore();
+      const queryDoc = doc(queryDb, 'products', itemId);
+      getDoc(queryDoc)
+         .then(res => setProduct({id: res.id, ...res.data()}))
+         .catch(err => console.log(err))
+         .finally(() => setLoaded(false))
+
+      /* fetch(`https://fakestoreapi.com/products/${itemId}`)
          .then(res => res.json())
          .then(data => setProduct(data))
          .catch(err => console.log(err))
-         .finally(() => setLoaded(false))
+         .finally(() => setLoaded(false)) */
    }, [itemId]);
 
    return (

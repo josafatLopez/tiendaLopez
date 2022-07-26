@@ -25,7 +25,7 @@ const Cart = () => {
                 </div>
                 <div className='cartProduct__info'>
                   <h2 className='cartProduct__title'> {product.title} </h2>
-                  <p className='cartProduct__subtitle'>{product.category}</p><br />
+                  <p className='cartProduct__subtitle'>{product.subtitle}</p><br />
                   <strong>Subtotal:</strong> ${product.price * product.quantity} MXN<br />
                   <strong>Cantidad:</strong> {product.quantity} <br /><br />
                   <button onClick={() => removeItem(product.id)} className="deleteProduct">Eliminar Producto</button>

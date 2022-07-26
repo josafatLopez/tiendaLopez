@@ -23,7 +23,7 @@ const ItemDetail = ({ product }) => {
 
             <div className="contentDetail">
                <h1 className='detailTitle'>{product.title}</h1>
-               <h3 className='detailCategory'>{product.category}</h3>
+               <h3 className='detailCategory'>{product.subtitle}</h3>
                <h2 className='detailPrice'>${product.price}MXN</h2>
                <p className='detailDescription'>
                   <strong className="descriptionTitle">Descripción</strong>
@@ -36,7 +36,7 @@ const ItemDetail = ({ product }) => {
                      <button className='btnBuy'>Finalizar compra</button>
                   </Link>
                   :
-                  <ItemCount stock={10} initial={0} onAdd={onAdd} />
+                  <ItemCount stock={product.stock} initial={0} onAdd={onAdd} />
                }
 
             </div>

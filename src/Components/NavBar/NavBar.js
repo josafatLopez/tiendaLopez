@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
 
    const categories = [
-      { name: "Electronics", id: 0, route: "/category/electronics" },
-      { name: "Jewelery", id: 1, route: "/category/jewelery" },
-      { name: "Men's clothing", id: 2, route: "/category/men's clothing" },
-      { name: "Women's clothing", id: 3, route: "/category/women's clothing" },
+      { name: "Madera", id: 0, route: "/category/madera" },
+      { name: "Papel", id: 1, route: "/category/papel" },
+      { name: "Acrilico", id: 2, route: "/category/acrilico" },
+      //{ name: "Women's clothing", id: 3, route: "/category/women's clothing" },
    ]
    
    return (
