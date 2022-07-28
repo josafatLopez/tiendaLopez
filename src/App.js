@@ -5,6 +5,7 @@ import ItemListContainer from './Components/Items/ItemListContainer';
 import Cart from './Components/Cart/Cart';
 import NavBar from './Components/NavBar/NavBar';
 import CustomProvider from './Components/Context/CartContext';
+import Order from './Components/Order/Order';
 
 import {
   BrowserRouter,
@@ -25,6 +26,7 @@ const App = () => {
           {/* Ruta para el detalle de los productos */}
           <Route path='/item/:itemId' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/order' element={<Order />} />
         </Routes>
       </CustomProvider>
     </BrowserRouter>

@@ -22,6 +22,8 @@
 .btnBuy {
    padding: 1rem;
    width: 100%;
+   display: block;
+   text-align: center;
    background-color: var(--orange);
    color: #FFF;
    border-radius: 5px;
