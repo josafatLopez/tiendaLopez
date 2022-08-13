@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
 
    return (
       <div className='container'>
-         {loaded ? <p>Loading...</p> :
+         {loaded ? <img className="loader" loading='lazy' src={'/img/others/loader.gif'} alt="Logo Menús México" /> :
             <ItemDetail
                product={product}
             />

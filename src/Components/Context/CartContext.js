@@ -5,7 +5,16 @@ export const context = createContext();
 const { Provider } = context
 const CustomProvider = ({ children }) => {
 
-   const [products, setProducts] = useState([])
+   //const [products, setProducts] = useState([])
+   const [products, setProducts] = useState(() => {
+      try {
+         const productsOnStorage = localStorage.getItem('cartProducts')
+         return productsOnStorage ? JSON.parse(productsOnStorage) : []
+      } catch (error) {
+         return [];
+      }
+   })
+
    const [qtyProducts, setQtyProducts] = useState(0)
 
    const cartQty = () => {
@@ -16,6 +25,8 @@ const CustomProvider = ({ children }) => {
    }
    useEffect(() => {
       cartQty();
+      localStorage.setItem('cartProducts', JSON.stringify(products))
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [products])
    
    const addItem = (product) => {

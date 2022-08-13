@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './Counter.css'
+import swal from 'sweetalert';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
 
    const [counter, setCounter] = useState(initial);
 
-   const del = () => { counter > 0 ? setCounter(counter - 1) : alert('No puede bajar de 0') }
-   const add = () => { counter < stock ? setCounter(counter + 1) : alert('No hay más stock') }
+   const del = () => { counter > 1 ? setCounter(counter - 1) : swal("¡Cuidado!", "La compra necesita al menos un producto", "error"); }
+   const add = () => { counter < stock ? setCounter(counter + 1) : swal("¡Lo sentimos!", "No contamos con la cantidad de productos suficiente", "warning"); }
 
    const addToCart = () => {
       onAdd(counter);

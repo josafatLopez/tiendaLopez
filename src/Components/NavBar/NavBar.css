@@ -42,11 +42,11 @@ nav ul li a .fa-circle-user {
 
 nav ul li a .fa-cart-shopping {
    color: var(--blue);
-   transition: .3s;
+   transition: .5s;
 }
 
 nav ul li a .fa-cart-shopping:hover {
-   color: var(--darkBlue);
+   color: var(--mediumBlue);
 }
 
 /* CART NUMBER */
@@ -55,11 +55,15 @@ nav ul li a .fa-cart-shopping:hover {
    position: relative;
    top: -15px;
    left: -8px;
-   padding: 4px 6px 4px 5.5px;
+   padding: 4px 8px 4px 8px;
    border-radius: 12px;
    background-color: var(--orange);
    font-size: 10px;
    color: #FFF;
+}
+
+.cartIcon {
+   margin-right: 0;
 }
 
 /* RESPONSIVE STYLES */

@@ -18,7 +18,7 @@ const ItemDetail = ({ product }) => {
          <div className="detailContainer">
 
             <div className="imageDetail">
-               <img src={product.image} alt={product.title} />
+               <img loading='lazy' src={product.image} alt={product.title} />
             </div>
 
             <div className="contentDetail">
@@ -36,7 +36,7 @@ const ItemDetail = ({ product }) => {
                      <button className='btnBuy'>Finalizar compra</button>
                   </Link>
                   :
-                  <ItemCount stock={product.stock} initial={0} onAdd={onAdd} />
+                  <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
                }
 
             </div>

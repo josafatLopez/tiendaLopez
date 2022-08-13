@@ -9,15 +9,16 @@ const Item = ({ product }) => {
       <div className='itemCard'>
 
         <div className="imageCard">
-          <img src={product.image} alt={product.title} />
+          <img loading='lazy' src={product.image} alt={product.title} />
         </div>
 
-        <div className='bodyCard'>
-          <h2 className='cardTitle'>{product.title}</h2>
-          <p className='cardCategory'>{product.subtitle}</p>
-          <h3 className='cardPrice'> ${product.price}MXN</h3>
-          <p className='cardDescription'>{product.description}</p>
-
+        <div className='wrap'>
+          <div className='bodyCard'>
+            <h2 className='cardTitle'>{product.title}</h2>
+            <p className='cardCategory'>{product.subtitle}</p>
+            <h3 className='cardPrice'> ${product.price}MXN</h3>
+            <p className='cardDescription'>{product.description}</p>
+          </div>
           <div className="bodyFooter">
             <Link to={`/item/${product.id}`} className="btnDetails">Ver Detalles</Link>
             {/* <button className="btnCart"><i className="fa-solid fa-cart-shopping"></i></button> */}

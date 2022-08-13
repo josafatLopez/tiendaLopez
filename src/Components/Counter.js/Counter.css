@@ -34,6 +34,14 @@
    background-color: var(--darkOrange);
 }
 
+.btnBuy__blue {
+   background-color: var(--blue);
+}
+
+.btnBuy__blue:hover {
+   background-color: var(--mediumBlue);
+}
+
 .marginRight {
    margin-right: 1.5rem;
 }

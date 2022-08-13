@@ -1,7 +1,8 @@
 .cartItems {
    max-width: 1200px;
-   display: flex;
+   min-height: 415px;
    margin: 2.5rem auto;
+   display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
 }
@@ -11,10 +12,7 @@
 }
 
 .cartInfo {
-   position: absolute;
-   right: 0;
    width: 30%;
-   padding: 0 2.5rem 0 0;
 }
 
 .cartList__product {
@@ -53,7 +51,6 @@
 }
 
 .deleteProduct {
-   font-weight: 600;
    color: var(--orange);
 }
 
@@ -70,4 +67,30 @@
    border: 1px solid var(--blue);
    background: var(--blue);
    color: #FFF;
+}
+
+/* Empty Cart */
+.emptyCart {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.emptyCart img {
+   width: 300px;
+   margin-bottom: 2rem;
+}
+
+.emptyCart h1 {
+   color: var(--blue);
+}
+
+.emptyCart h1 a {
+   color: var(--orange);
+   text-decoration: underline;
+}
+
+.emptyCart h1 a:hover {
+   color: var(--darkOrange);
 }

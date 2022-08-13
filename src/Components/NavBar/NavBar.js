@@ -16,14 +16,14 @@ const NavBar = () => {
       <>
          <header>
             <nav>
-               <Link to="/"><img src={'/img/logo/logo.png'} alt="Logo Menús México" /></Link>
+               <Link to="/"><img loading='lazy' src={'/img/logo/logo.png'} alt="Logo Menús México" /></Link>
                <ul>
                   <li>
                      {categories.map((category) => <Link key={category.id} to={category.route}>{category.name}</Link>)}
                   </li>
                   |
                   {/* <li><Link to="/"><i className="fa-solid fa-circle-user"></i></Link></li> */}
-                  <Link to="/cart"><CartWidget /></Link>
+                  <CartWidget />
                </ul>
             </nav>
          </header>

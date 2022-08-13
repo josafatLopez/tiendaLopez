@@ -12,6 +12,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom'
+import Footer from './Components/Footer/Footer';
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/order' element={<Order />} />
         </Routes>
       </CustomProvider>
+      <Footer />
     </BrowserRouter>
   );
 }

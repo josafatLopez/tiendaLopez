@@ -4,7 +4,6 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 import ItemList from './ItemList'
 import './Items.css'
 
-
 const ItemListContainer = () => {
 
   const { categoryName } = useParams()
@@ -47,7 +46,7 @@ const ItemListContainer = () => {
       {/* Products */}
       <br /><br />
       {
-        loading ? <p>Loading...</p> :
+        loading ? <img className="loader" loading='lazy' src={'/img/others/loader.gif'} alt="Logo Menús México" /> :
           <ItemList products={products} />
       }
     </div>

@@ -2,7 +2,6 @@
 .listContainer {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
    margin-top: -1.5rem;
 }
 
@@ -12,9 +11,13 @@
    background: #FFF;
    display: flex;
    box-shadow: 0px 2px 25px 5px rgb(234, 234, 234);
-   margin-bottom: 1.5rem;
+   margin: 0 1rem 1.5rem 0;
    border-radius: 10px;
    overflow: hidden;
+}
+
+.wrap {
+   flex-wrap: wrap;
 }
 
 .itemCard .imageCard {
@@ -30,18 +33,24 @@
 }
 
 .bodyCard {
-   width: 60%;
-   padding: 1.5rem;
+   padding: 1.3rem;
+   height: 222.5px;
+   overflow: hidden;
+}
+
+.bodyFooter {
+   padding: 0 1.5rem;
 }
 
 .cardTitle {
    overflow: hidden;
    color: var(--blue);
-   height: 60px;
+   margin-bottom: .5rem;
+   font-size: 20px;
 }
 
 .cardCategory {
-   font-size: 18px;
+   font-size: 17px;
    color: var(--darkGray);
    margin: -.2rem 0 .75rem;
 }
@@ -54,12 +63,11 @@
 .cardDescription {
    color: var(--darkestGray);
    overflow: hidden;
-   height: 60px;
-   margin-bottom: 1rem;
+   margin-bottom: 1.25rem;
+   font-size: 14px;
 }
 
 .btnDetails {
-   /* background: var(--lightBlue); */
    background-color: var(--orange);
    color: #FFF;
    padding: .6rem 1.5rem;
@@ -109,32 +117,31 @@
 
 .detailTitle {
    color: var(--blue);
-   margin-bottom: .5rem;
-   font-size: 35px;
-   overflow: hidden;
+   margin-bottom: .2rem;
+   font-size: 32.5px;
 }
 
 .detailCategory {
    color: var(--darkGray);
-   font-weight: 100;
-   margin-bottom: .75rem;
+   font-weight: 300;
+   margin-bottom: .5rem;
    font-size: 25px;
 }
 
 .detailPrice {
    color: var(--lightBlue);
-   margin-bottom: 1rem;
-   font-size: 30px;
-}
-
-.detailDescription {
-   color: var(--darkestGray);
-   margin-bottom: 2.5rem;
+   margin-bottom: 1.25rem;
+   font-size: 28px;
 }
 
 .descriptionTitle {
    color: #000;
    font-size: 25px;
+}
+
+.detailDescription {
+   color: var(--darkestGray);
+   margin-bottom: 2.5rem;
 }
 
 .addCart {
@@ -144,5 +151,10 @@
    padding: 1rem;
    color: #FFF;
    font-size: 20px;
-   font-weight: 600;
+}
+
+.loader {
+   display: flex;
+   margin: 0 auto;
+   width: 40px;
 }

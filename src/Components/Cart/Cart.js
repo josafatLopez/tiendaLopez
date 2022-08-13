@@ -9,15 +9,20 @@ const Cart = () => {
   return (
     <>
       {products.length === 0
-        ? <div className="cartItems">
-          <h1>No hay productos en tu carrito <Link to='/'>Busca Aquí</Link></h1>
+        ? <div className="cartItems emptyCart">
+          <div>
+            <img loading='lazy' src={'/img/others/empty-cart.png'} alt="Logo Menús México" />
+            <h1>No hay productos en tu carrito
+              <br />
+              <Link to='/'>Busca Aquí</Link></h1>
+          </div>
         </div>
         : <div className='cartItems'>
+          <div className="cartList">
           {products.map(product =>
-            <div className="cartList" key={product.id}>
-              <div className="cartList__product" >
+              <div className="cartList__product" key={product.id} >
                 <div className='cartProduct__img'>
-                  <img src={product.image} alt={product.title} />
+                  <img loading='lazy' src={product.image} alt={product.title} />
                 </div>
                 <div className='cartProduct__info'>
                   <h2 className='cartProduct__title'> {product.title} </h2>
@@ -27,8 +32,8 @@ const Cart = () => {
                   <button onClick={() => removeItem(product.id)} className="deleteProduct">Eliminar Producto</button>
                 </div>
               </div>
-            </div>
           )}
+          </div>
           <aside className='cartInfo'>
             <h3>
               Productos Totales: {totalProducts()} <br />

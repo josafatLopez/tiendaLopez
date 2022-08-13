@@ -1,0 +1,21 @@
+footer {
+   padding: 2rem 0;
+   background-color: var(--lightGray);
+   display: flex;
+   justify-content: center;
+}
+
+footer div {
+   display: inline-block;
+   text-align: center;
+}
+
+footer div img {
+   width: 50px;
+   height: 48px;
+}
+
+footer div p {
+   font-size: 12px;
+   color: var(--darkGray);
+}
